@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/jquery-gmaps-latlon-picker.css" />
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/javascripts/jquery-gmaps-latlon-picker.js"></script>
+</head>
+<body>
+    
+    <div class="one-half column" style="margin: 5%">
+        <h3>Assignment-9</h3>
+        <form>
+            <fieldset class="gllpLatlonPicker">
+                <input type="text" class="gllpSearchField">
+                <input type="button" class="gllpSearchButton" value="search">
+                <br />
+                <br />
+                <div class="gllpMap">Google Maps</div>
+                <br />
+                Latitude/Longitude:
+			<input type="text" class="gllpLatitude" id="latitude" placeholder="Enter Latitude" />
+                /
+			<input type="text" class="gllpLongitude" id="longitude" placeholder="Enter Longitude" />
+                <input type="hidden" class="gllpZoom" value="3" />
+                <input type="hidden" class="gllpUpdateButton" value="update map">
+                <br />
+            </fieldset>
+            <div class="row">
+                <label>Name</label>
+                <input class="u-full-width" placeholder="Enter Name" id="name" type="text">
+            </div>
+            <div class="row">
+                <label>Category</label>
+                <input class="u-full-width" placeholder="Enter Category" id="category" type="text">
+            </div>
+
+            <input class="button-primary" id="btnSubmit" value="Submit" type="button">
+        </form>
+        <hr />
+        <div>
+             <div class="row">
+                <label><b>Location</b></label>
+                <input class="u-full-width" placeholder="Enter Location" id="location" type="text">
+                 <input class="button-primary" id="btnLocation" value="Get Nearest Locations" type="button">
+            </div>
+            <br />
+            <table id="tblLocations">
+                <thead>
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td><b>Category</b></td>
+                        <td><b>Latitude / Longitude</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/javascripts/index.js"></script>
